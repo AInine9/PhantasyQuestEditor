@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NPCDataTable" msprop:Generator_TableClassName="NPCDataTableDataTable" msprop:Generator_TableVarName="tableNPCDataTable" msprop:Generator_RowChangedName="NPCDataTableRowChanged" msprop:Generator_TablePropName="NPCDataTable" msprop:Generator_RowDeletingName="NPCDataTableRowDeleting" msprop:Generator_RowChangingName="NPCDataTableRowChanging" msprop:Generator_RowEvHandlerName="NPCDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="NPCDataTableRowDeleted" msprop:Generator_RowClassName="NPCDataTableRow" msprop:Generator_UserTableName="NPCDataTable" msprop:Generator_RowEvArgName="NPCDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NPC名" msprop:Generator_ColumnVarNameInTable="columnNPC名" msprop:Generator_ColumnPropNameInRow="NPC名" msprop:Generator_ColumnPropNameInTable="NPC名Column" msprop:Generator_UserColumnName="NPC名" type="xs:string" minOccurs="0" />
+              <xs:element name="NPCID" msprop:Generator_ColumnVarNameInTable="columnNPCID" msprop:Generator_ColumnPropNameInRow="NPCID" msprop:Generator_ColumnPropNameInTable="NPCIDColumn" msprop:Generator_UserColumnName="NPCID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjectiveDataTable" msprop:Generator_TableClassName="ObjectiveDataTableDataTable" msprop:Generator_TableVarName="tableObjectiveDataTable" msprop:Generator_RowChangedName="ObjectiveDataTableRowChanged" msprop:Generator_TablePropName="ObjectiveDataTable" msprop:Generator_RowDeletingName="ObjectiveDataTableRowDeleting" msprop:Generator_RowChangingName="ObjectiveDataTableRowChanging" msprop:Generator_RowEvHandlerName="ObjectiveDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ObjectiveDataTableRowDeleted" msprop:Generator_RowClassName="ObjectiveDataTableRow" msprop:Generator_UserTableName="ObjectiveDataTable" msprop:Generator_RowEvArgName="ObjectiveDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="目標" msprop:Generator_ColumnVarNameInTable="column目標" msprop:Generator_ColumnPropNameInRow="目標" msprop:Generator_ColumnPropNameInTable="目標Column" msprop:Generator_UserColumnName="目標" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConditionDataTable" msprop:Generator_TableClassName="ConditionDataTableDataTable" msprop:Generator_TableVarName="tableConditionDataTable" msprop:Generator_TablePropName="ConditionDataTable" msprop:Generator_RowDeletingName="ConditionDataTableRowDeleting" msprop:Generator_RowChangingName="ConditionDataTableRowChanging" msprop:Generator_RowEvHandlerName="ConditionDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ConditionDataTableRowDeleted" msprop:Generator_UserTableName="ConditionDataTable" msprop:Generator_RowChangedName="ConditionDataTableRowChanged" msprop:Generator_RowEvArgName="ConditionDataTableRowChangeEvent" msprop:Generator_RowClassName="ConditionDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="条件" msprop:Generator_ColumnVarNameInTable="column条件" msprop:Generator_ColumnPropNameInRow="条件" msprop:Generator_ColumnPropNameInTable="条件Column" msprop:Generator_UserColumnName="条件" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EventDataTable" msprop:Generator_TableClassName="EventDataTableDataTable" msprop:Generator_TableVarName="tableEventDataTable" msprop:Generator_TablePropName="EventDataTable" msprop:Generator_RowDeletingName="EventDataTableRowDeleting" msprop:Generator_RowChangingName="EventDataTableRowChanging" msprop:Generator_RowEvHandlerName="EventDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="EventDataTableRowDeleted" msprop:Generator_UserTableName="EventDataTable" msprop:Generator_RowChangedName="EventDataTableRowChanged" msprop:Generator_RowEvArgName="EventDataTableRowChangeEvent" msprop:Generator_RowClassName="EventDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="イベント" msprop:Generator_ColumnVarNameInTable="columnイベント" msprop:Generator_ColumnPropNameInRow="イベント" msprop:Generator_ColumnPropNameInTable="イベントColumn" msprop:Generator_UserColumnName="イベント" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="JournalDataTable" msprop:Generator_TableClassName="JournalDataTableDataTable" msprop:Generator_TableVarName="tableJournalDataTable" msprop:Generator_TablePropName="JournalDataTable" msprop:Generator_RowDeletingName="JournalDataTableRowDeleting" msprop:Generator_RowChangingName="JournalDataTableRowChanging" msprop:Generator_RowEvHandlerName="JournalDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="JournalDataTableRowDeleted" msprop:Generator_UserTableName="JournalDataTable" msprop:Generator_RowChangedName="JournalDataTableRowChanged" msprop:Generator_RowEvArgName="JournalDataTableRowChangeEvent" msprop:Generator_RowClassName="JournalDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="日記文" msprop:Generator_ColumnVarNameInTable="column日記文" msprop:Generator_ColumnPropNameInRow="日記文" msprop:Generator_ColumnPropNameInTable="日記文Column" msprop:Generator_UserColumnName="日記文" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StartPointDataTable" msprop:Generator_TableClassName="StartPointDataTableDataTable" msprop:Generator_TableVarName="tableStartPointDataTable" msprop:Generator_TablePropName="StartPointDataTable" msprop:Generator_RowDeletingName="StartPointDataTableRowDeleting" msprop:Generator_RowChangingName="StartPointDataTableRowChanging" msprop:Generator_RowEvHandlerName="StartPointDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="StartPointDataTableRowDeleted" msprop:Generator_UserTableName="StartPointDataTable" msprop:Generator_RowChangedName="StartPointDataTableRowChanged" msprop:Generator_RowEvArgName="StartPointDataTableRowChangeEvent" msprop:Generator_RowClassName="StartPointDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="会話番号" msprop:Generator_ColumnVarNameInTable="column会話番号" msprop:Generator_ColumnPropNameInRow="会話番号" msprop:Generator_ColumnPropNameInTable="会話番号Column" msprop:Generator_UserColumnName="会話番号" type="xs:int" minOccurs="0" />
+              <xs:element name="会話文" msprop:Generator_ColumnVarNameInTable="column会話文" msprop:Generator_ColumnPropNameInRow="会話文" msprop:Generator_ColumnPropNameInTable="会話文Column" msprop:Generator_UserColumnName="会話文" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
