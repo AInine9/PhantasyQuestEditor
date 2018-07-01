@@ -27,13 +27,20 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.startPointListView = new System.Windows.Forms.DataGridView();
+            this.会話番号DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.会話文DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startPointDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new PhantasyQuestEditor.datas.DataSet1();
             this.label7 = new System.Windows.Forms.Label();
             this.npcListDataView = new System.Windows.Forms.DataGridView();
+            this.nPC名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPCDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.questNameLabel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.questFlowPanel_ID1 = new System.Windows.Forms.Panel();
+            this.questFlowPanel_ID1 = new System.Windows.Forms.FlowLayoutPanel();
             this.questConnectButton = new System.Windows.Forms.Button();
             this.questEvents = new System.Windows.Forms.CheckedListBox();
             this.questConditions = new System.Windows.Forms.CheckedListBox();
@@ -45,6 +52,9 @@
             this.objectiveNameList = new System.Windows.Forms.ListBox();
             this.addObjectiveButton = new System.Windows.Forms.Button();
             this.objectiveDataListView = new System.Windows.Forms.DataGridView();
+            this.目標DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objectiveDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet11 = new PhantasyQuestEditor.datas.DataSet1();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.eventArgument2 = new System.Windows.Forms.ListBox();
@@ -52,6 +62,9 @@
             this.eventNameList = new System.Windows.Forms.ListBox();
             this.addEventButton = new System.Windows.Forms.Button();
             this.EventDataListView = new System.Windows.Forms.DataGridView();
+            this.イベントDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet13 = new PhantasyQuestEditor.datas.DataSet1();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.conditionArgument2 = new System.Windows.Forms.ListBox();
@@ -59,11 +72,17 @@
             this.conditionNameList = new System.Windows.Forms.ListBox();
             this.addConditionButton = new System.Windows.Forms.Button();
             this.conditionDataListView = new System.Windows.Forms.DataGridView();
+            this.条件DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conditionDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet12 = new PhantasyQuestEditor.datas.DataSet1();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.addJournalButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.journalDataListView = new System.Windows.Forms.DataGridView();
+            this.日記文DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.journalDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet14 = new PhantasyQuestEditor.datas.DataSet1();
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.編集ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,51 +90,32 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.会話番号DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.会話文DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPointDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new PhantasyQuestEditor.datas.DataSet1();
-            this.nPC名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nPCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nPCDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.目標DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objectiveDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11 = new PhantasyQuestEditor.datas.DataSet1();
-            this.イベントDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet13 = new PhantasyQuestEditor.datas.DataSet1();
-            this.条件DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conditionDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet12 = new PhantasyQuestEditor.datas.DataSet1();
-            this.日記文DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.journalDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet14 = new PhantasyQuestEditor.datas.DataSet1();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.questFlowPanel_ID1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EventDataListView)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EventDataListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -165,6 +165,29 @@
             this.startPointListView.Size = new System.Drawing.Size(876, 210);
             this.startPointListView.TabIndex = 5;
             // 
+            // 会話番号DataGridViewTextBoxColumn
+            // 
+            this.会話番号DataGridViewTextBoxColumn.DataPropertyName = "会話番号";
+            this.会話番号DataGridViewTextBoxColumn.HeaderText = "会話番号";
+            this.会話番号DataGridViewTextBoxColumn.Name = "会話番号DataGridViewTextBoxColumn";
+            // 
+            // 会話文DataGridViewTextBoxColumn
+            // 
+            this.会話文DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.会話文DataGridViewTextBoxColumn.DataPropertyName = "会話文";
+            this.会話文DataGridViewTextBoxColumn.HeaderText = "会話文";
+            this.会話文DataGridViewTextBoxColumn.Name = "会話文DataGridViewTextBoxColumn";
+            // 
+            // startPointDataTableBindingSource
+            // 
+            this.startPointDataTableBindingSource.DataMember = "StartPointDataTable";
+            this.startPointDataTableBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -187,6 +210,25 @@
             this.npcListDataView.RowTemplate.Height = 21;
             this.npcListDataView.Size = new System.Drawing.Size(411, 186);
             this.npcListDataView.TabIndex = 3;
+            // 
+            // nPC名DataGridViewTextBoxColumn
+            // 
+            this.nPC名DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nPC名DataGridViewTextBoxColumn.DataPropertyName = "NPC名";
+            this.nPC名DataGridViewTextBoxColumn.HeaderText = "NPC名";
+            this.nPC名DataGridViewTextBoxColumn.Name = "nPC名DataGridViewTextBoxColumn";
+            // 
+            // nPCIDDataGridViewTextBoxColumn
+            // 
+            this.nPCIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nPCIDDataGridViewTextBoxColumn.DataPropertyName = "NPCID";
+            this.nPCIDDataGridViewTextBoxColumn.HeaderText = "NPCID";
+            this.nPCIDDataGridViewTextBoxColumn.Name = "nPCIDDataGridViewTextBoxColumn";
+            // 
+            // nPCDataTableBindingSource
+            // 
+            this.nPCDataTableBindingSource.DataMember = "NPCDataTable";
+            this.nPCDataTableBindingSource.DataSource = this.dataSet1;
             // 
             // label2
             // 
@@ -229,19 +271,19 @@
             // 
             this.questFlowPanel_ID1.BackColor = System.Drawing.Color.DarkSalmon;
             this.questFlowPanel_ID1.Controls.Add(this.questConnectButton);
+            this.questFlowPanel_ID1.Controls.Add(this.questSentence);
             this.questFlowPanel_ID1.Controls.Add(this.questEvents);
             this.questFlowPanel_ID1.Controls.Add(this.questConditions);
             this.questFlowPanel_ID1.Controls.Add(this.questSpeaker);
-            this.questFlowPanel_ID1.Controls.Add(this.questSentence);
             this.questFlowPanel_ID1.Location = new System.Drawing.Point(6, 6);
             this.questFlowPanel_ID1.Name = "questFlowPanel_ID1";
-            this.questFlowPanel_ID1.Size = new System.Drawing.Size(230, 175);
+            this.questFlowPanel_ID1.Size = new System.Drawing.Size(230, 196);
             this.questFlowPanel_ID1.TabIndex = 0;
             // 
             // questConnectButton
             // 
             this.questConnectButton.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.questConnectButton.Location = new System.Drawing.Point(4, 147);
+            this.questConnectButton.Location = new System.Drawing.Point(3, 3);
             this.questConnectButton.Name = "questConnectButton";
             this.questConnectButton.Size = new System.Drawing.Size(75, 25);
             this.questConnectButton.TabIndex = 3;
@@ -252,7 +294,7 @@
             // questEvents
             // 
             this.questEvents.FormattingEnabled = true;
-            this.questEvents.Location = new System.Drawing.Point(119, 82);
+            this.questEvents.Location = new System.Drawing.Point(3, 112);
             this.questEvents.Name = "questEvents";
             this.questEvents.ScrollAlwaysVisible = true;
             this.questEvents.Size = new System.Drawing.Size(106, 60);
@@ -261,7 +303,7 @@
             // questConditions
             // 
             this.questConditions.FormattingEnabled = true;
-            this.questConditions.Location = new System.Drawing.Point(4, 82);
+            this.questConditions.Location = new System.Drawing.Point(115, 112);
             this.questConditions.Name = "questConditions";
             this.questConditions.ScrollAlwaysVisible = true;
             this.questConditions.Size = new System.Drawing.Size(109, 60);
@@ -271,7 +313,7 @@
             // 
             this.questSpeaker.FormattingEnabled = true;
             this.questSpeaker.ItemHeight = 12;
-            this.questSpeaker.Location = new System.Drawing.Point(4, 59);
+            this.questSpeaker.Location = new System.Drawing.Point(3, 178);
             this.questSpeaker.Name = "questSpeaker";
             this.questSpeaker.ScrollAlwaysVisible = true;
             this.questSpeaker.Size = new System.Drawing.Size(93, 16);
@@ -279,11 +321,11 @@
             // 
             // questSentence
             // 
-            this.questSentence.Location = new System.Drawing.Point(4, 4);
+            this.questSentence.Location = new System.Drawing.Point(3, 34);
             this.questSentence.Multiline = true;
             this.questSentence.Name = "questSentence";
             this.questSentence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.questSentence.Size = new System.Drawing.Size(221, 49);
+            this.questSentence.Size = new System.Drawing.Size(221, 72);
             this.questSentence.TabIndex = 0;
             // 
             // tabPage3
@@ -352,6 +394,23 @@
             this.objectiveDataListView.RowTemplate.Height = 21;
             this.objectiveDataListView.Size = new System.Drawing.Size(880, 280);
             this.objectiveDataListView.TabIndex = 1;
+            // 
+            // 目標DataGridViewTextBoxColumn
+            // 
+            this.目標DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.目標DataGridViewTextBoxColumn.DataPropertyName = "目標";
+            this.目標DataGridViewTextBoxColumn.HeaderText = "目標";
+            this.目標DataGridViewTextBoxColumn.Name = "目標DataGridViewTextBoxColumn";
+            // 
+            // objectiveDataTableBindingSource
+            // 
+            this.objectiveDataTableBindingSource.DataMember = "ObjectiveDataTable";
+            this.objectiveDataTableBindingSource.DataSource = this.dataSet11;
+            // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -429,6 +488,23 @@
             this.EventDataListView.Size = new System.Drawing.Size(880, 280);
             this.EventDataListView.TabIndex = 2;
             // 
+            // イベントDataGridViewTextBoxColumn
+            // 
+            this.イベントDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.イベントDataGridViewTextBoxColumn.DataPropertyName = "イベント";
+            this.イベントDataGridViewTextBoxColumn.HeaderText = "イベント";
+            this.イベントDataGridViewTextBoxColumn.Name = "イベントDataGridViewTextBoxColumn";
+            // 
+            // eventDataTableBindingSource
+            // 
+            this.eventDataTableBindingSource.DataMember = "EventDataTable";
+            this.eventDataTableBindingSource.DataSource = this.dataSet13;
+            // 
+            // dataSet13
+            // 
+            this.dataSet13.DataSetName = "DataSet1";
+            this.dataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -505,6 +581,23 @@
             this.conditionDataListView.Size = new System.Drawing.Size(880, 280);
             this.conditionDataListView.TabIndex = 2;
             // 
+            // 条件DataGridViewTextBoxColumn
+            // 
+            this.条件DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.条件DataGridViewTextBoxColumn.DataPropertyName = "条件";
+            this.条件DataGridViewTextBoxColumn.HeaderText = "条件";
+            this.条件DataGridViewTextBoxColumn.Name = "条件DataGridViewTextBoxColumn";
+            // 
+            // conditionDataTableBindingSource
+            // 
+            this.conditionDataTableBindingSource.DataMember = "ConditionDataTable";
+            this.conditionDataTableBindingSource.DataSource = this.dataSet12;
+            // 
+            // dataSet12
+            // 
+            this.dataSet12.DataSetName = "DataSet1";
+            this.dataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -557,6 +650,23 @@
             this.journalDataListView.RowTemplate.Height = 21;
             this.journalDataListView.Size = new System.Drawing.Size(880, 280);
             this.journalDataListView.TabIndex = 2;
+            // 
+            // 日記文DataGridViewTextBoxColumn
+            // 
+            this.日記文DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.日記文DataGridViewTextBoxColumn.DataPropertyName = "日記文";
+            this.日記文DataGridViewTextBoxColumn.HeaderText = "日記文";
+            this.日記文DataGridViewTextBoxColumn.Name = "日記文DataGridViewTextBoxColumn";
+            // 
+            // journalDataTableBindingSource
+            // 
+            this.journalDataTableBindingSource.DataMember = "JournalDataTable";
+            this.journalDataTableBindingSource.DataSource = this.dataSet14;
+            // 
+            // dataSet14
+            // 
+            this.dataSet14.DataSetName = "DataSet1";
+            this.dataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -612,116 +722,6 @@
             this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
             // 
-            // 会話番号DataGridViewTextBoxColumn
-            // 
-            this.会話番号DataGridViewTextBoxColumn.DataPropertyName = "会話番号";
-            this.会話番号DataGridViewTextBoxColumn.HeaderText = "会話番号";
-            this.会話番号DataGridViewTextBoxColumn.Name = "会話番号DataGridViewTextBoxColumn";
-            // 
-            // 会話文DataGridViewTextBoxColumn
-            // 
-            this.会話文DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.会話文DataGridViewTextBoxColumn.DataPropertyName = "会話文";
-            this.会話文DataGridViewTextBoxColumn.HeaderText = "会話文";
-            this.会話文DataGridViewTextBoxColumn.Name = "会話文DataGridViewTextBoxColumn";
-            // 
-            // startPointDataTableBindingSource
-            // 
-            this.startPointDataTableBindingSource.DataMember = "StartPointDataTable";
-            this.startPointDataTableBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nPC名DataGridViewTextBoxColumn
-            // 
-            this.nPC名DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nPC名DataGridViewTextBoxColumn.DataPropertyName = "NPC名";
-            this.nPC名DataGridViewTextBoxColumn.HeaderText = "NPC名";
-            this.nPC名DataGridViewTextBoxColumn.Name = "nPC名DataGridViewTextBoxColumn";
-            // 
-            // nPCIDDataGridViewTextBoxColumn
-            // 
-            this.nPCIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nPCIDDataGridViewTextBoxColumn.DataPropertyName = "NPCID";
-            this.nPCIDDataGridViewTextBoxColumn.HeaderText = "NPCID";
-            this.nPCIDDataGridViewTextBoxColumn.Name = "nPCIDDataGridViewTextBoxColumn";
-            // 
-            // nPCDataTableBindingSource
-            // 
-            this.nPCDataTableBindingSource.DataMember = "NPCDataTable";
-            this.nPCDataTableBindingSource.DataSource = this.dataSet1;
-            // 
-            // 目標DataGridViewTextBoxColumn
-            // 
-            this.目標DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.目標DataGridViewTextBoxColumn.DataPropertyName = "目標";
-            this.目標DataGridViewTextBoxColumn.HeaderText = "目標";
-            this.目標DataGridViewTextBoxColumn.Name = "目標DataGridViewTextBoxColumn";
-            // 
-            // objectiveDataTableBindingSource
-            // 
-            this.objectiveDataTableBindingSource.DataMember = "ObjectiveDataTable";
-            this.objectiveDataTableBindingSource.DataSource = this.dataSet11;
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // イベントDataGridViewTextBoxColumn
-            // 
-            this.イベントDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.イベントDataGridViewTextBoxColumn.DataPropertyName = "イベント";
-            this.イベントDataGridViewTextBoxColumn.HeaderText = "イベント";
-            this.イベントDataGridViewTextBoxColumn.Name = "イベントDataGridViewTextBoxColumn";
-            // 
-            // eventDataTableBindingSource
-            // 
-            this.eventDataTableBindingSource.DataMember = "EventDataTable";
-            this.eventDataTableBindingSource.DataSource = this.dataSet13;
-            // 
-            // dataSet13
-            // 
-            this.dataSet13.DataSetName = "DataSet1";
-            this.dataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // 条件DataGridViewTextBoxColumn
-            // 
-            this.条件DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.条件DataGridViewTextBoxColumn.DataPropertyName = "条件";
-            this.条件DataGridViewTextBoxColumn.HeaderText = "条件";
-            this.条件DataGridViewTextBoxColumn.Name = "条件DataGridViewTextBoxColumn";
-            // 
-            // conditionDataTableBindingSource
-            // 
-            this.conditionDataTableBindingSource.DataMember = "ConditionDataTable";
-            this.conditionDataTableBindingSource.DataSource = this.dataSet12;
-            // 
-            // dataSet12
-            // 
-            this.dataSet12.DataSetName = "DataSet1";
-            this.dataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // 日記文DataGridViewTextBoxColumn
-            // 
-            this.日記文DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.日記文DataGridViewTextBoxColumn.DataPropertyName = "日記文";
-            this.日記文DataGridViewTextBoxColumn.HeaderText = "日記文";
-            this.日記文DataGridViewTextBoxColumn.Name = "日記文DataGridViewTextBoxColumn";
-            // 
-            // journalDataTableBindingSource
-            // 
-            this.journalDataTableBindingSource.DataMember = "JournalDataTable";
-            this.journalDataTableBindingSource.DataSource = this.dataSet14;
-            // 
-            // dataSet14
-            // 
-            this.dataSet14.DataSetName = "DataSet1";
-            this.dataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -735,35 +735,35 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.questFlowPanel_ID1.ResumeLayout(false);
             this.questFlowPanel_ID1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -791,7 +791,7 @@
         private System.Windows.Forms.ToolStripMenuItem エクスポートToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem インポートToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 開くToolStripMenuItem;
-        private System.Windows.Forms.Panel questFlowPanel_ID1;
+        private System.Windows.Forms.FlowLayoutPanel questFlowPanel_ID1;
         private System.Windows.Forms.TextBox questSentence;
         private System.Windows.Forms.CheckedListBox questEvents;
         private System.Windows.Forms.CheckedListBox questConditions;
