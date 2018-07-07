@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace PhantasyQuestEditor {
     public partial class Form1 : Form {
 
-        private Point panelCenterLocation, mouseLocation;
+        private Point startLocation, endLocation;
         private Pen blackPen = new Pen(Color.Black, 5);
         private Graphics graphics;
         private int panelID;
@@ -24,34 +24,32 @@ namespace PhantasyQuestEditor {
         }
 
         public void QuestConnectButtonClicked(object sender, EventArgs e) {
-            panelCenterLocation = new Point(
-                (questConnectButton.Parent.Location.X + questConnectButton.Parent.Width) / 2,
-                (questConnectButton.Parent.Location.Y + questConnectButton.Parent.Height) / 2);
+            Control clickedButton = (Control)sender;
+            Control parentPanel = clickedButton.Parent;
+
+            startLocation = tabPage2.PointToClient(clickedButton.PointToScreen(clickedButton.Location));
 
             graphics = tabPage2.CreateGraphics();
 
-            panelID = Int32.Parse(questConnectButton.Parent.Name.Replace("questFlowPanel_ID", ""));
+            panelID = Int32.Parse(parentPanel.Name.Replace("questFlowPanel_ID", ""));
         }
 
         private void MousePressed(object sender, MouseEventArgs e) {
-            if (graphics != null) {
-                mouseLocation = new Point(e.X, e.Y);
+            Control pressedControl = (Control)sender;
+            String name = pressedControl.Name;
 
-                graphics.DrawLine(blackPen, panelCenterLocation, mouseLocation);
+            if (graphics != null && name.Equals("tabPage2")) {
+                endLocation = new Point(e.X, e.Y);
 
+                graphics.DrawLine(blackPen, startLocation, endLocation);
+
+                graphics.Dispose();
                 graphics = null;
 
-                QuestFlowPanel questFlowPanel = new QuestFlowPanel(mouseLocation, panelID);
-                Panel panel = questFlowPanel.getQuestFlowPanel();
-                Button connectButton = questFlowPanel.getQuestConnectButton();
-
-                connectButton.Click += new EventHandler(this.QuestConnectButtonClicked);
-
-                panel.Controls.Add(connectButton);
+                QuestFlowPanel questFlowPanel = new QuestFlowPanel(endLocation, panelID, this.QuestConnectButtonClicked);
+                FlowLayoutPanel panel = questFlowPanel.getQuestFlowPanel();
 
                 tabPage2.Controls.Add(panel);
-                panel.Controls.Add(connectButton);
-                connectButton.BringToFront();
             }
         }
     }

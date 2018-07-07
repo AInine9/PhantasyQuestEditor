@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace PhantasyQuestEditor {
     class QuestFlowPanel {
 
-        public QuestFlowPanel(Point mouseLocation, int ID) {
+        public QuestFlowPanel(Point mouseLocation, int ID, EventHandler clickedEvent) {
             panel = new FlowLayoutPanel();
             button = new Button();
             events = new CheckedListBox();
@@ -22,6 +22,7 @@ namespace PhantasyQuestEditor {
             // questFlowPanel
             // 
             panel.BackColor = Color.DarkSalmon;
+            panel.Controls.Add(button);
             panel.Controls.Add(sentence);
             panel.Controls.Add(events);
             panel.Controls.Add(conditions);
@@ -72,6 +73,7 @@ namespace PhantasyQuestEditor {
             button.TabIndex = 3;
             button.Text = "分岐させる";
             button.UseVisualStyleBackColor = true;
+            button.Click += new EventHandler(clickedEvent);
             button.Show();
 
 

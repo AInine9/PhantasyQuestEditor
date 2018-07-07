@@ -41,11 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.questFlowPanel_ID1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.questConnectButton = new System.Windows.Forms.Button();
-            this.questEvents = new System.Windows.Forms.CheckedListBox();
-            this.questConditions = new System.Windows.Forms.CheckedListBox();
-            this.questSpeaker = new System.Windows.Forms.ListBox();
-            this.questSentence = new System.Windows.Forms.TextBox();
+            this.questConnectButton1 = new System.Windows.Forms.Button();
+            this.questSentence1 = new System.Windows.Forms.TextBox();
+            this.questEvents1 = new System.Windows.Forms.CheckedListBox();
+            this.questConditions1 = new System.Windows.Forms.CheckedListBox();
+            this.questSpeaker1 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.objectiveArgument2 = new System.Windows.Forms.ListBox();
             this.objectiveArgument1 = new System.Windows.Forms.ListBox();
@@ -270,63 +270,63 @@
             // questFlowPanel_ID1
             // 
             this.questFlowPanel_ID1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.questFlowPanel_ID1.Controls.Add(this.questConnectButton);
-            this.questFlowPanel_ID1.Controls.Add(this.questSentence);
-            this.questFlowPanel_ID1.Controls.Add(this.questEvents);
-            this.questFlowPanel_ID1.Controls.Add(this.questConditions);
-            this.questFlowPanel_ID1.Controls.Add(this.questSpeaker);
+            this.questFlowPanel_ID1.Controls.Add(this.questConnectButton1);
+            this.questFlowPanel_ID1.Controls.Add(this.questSentence1);
+            this.questFlowPanel_ID1.Controls.Add(this.questEvents1);
+            this.questFlowPanel_ID1.Controls.Add(this.questConditions1);
+            this.questFlowPanel_ID1.Controls.Add(this.questSpeaker1);
             this.questFlowPanel_ID1.Location = new System.Drawing.Point(6, 6);
             this.questFlowPanel_ID1.Name = "questFlowPanel_ID1";
             this.questFlowPanel_ID1.Size = new System.Drawing.Size(230, 196);
             this.questFlowPanel_ID1.TabIndex = 0;
             // 
-            // questConnectButton
+            // questConnectButton1
             // 
-            this.questConnectButton.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.questConnectButton.Location = new System.Drawing.Point(3, 3);
-            this.questConnectButton.Name = "questConnectButton";
-            this.questConnectButton.Size = new System.Drawing.Size(75, 25);
-            this.questConnectButton.TabIndex = 3;
-            this.questConnectButton.Text = "分岐させる";
-            this.questConnectButton.UseVisualStyleBackColor = true;
-            this.questConnectButton.Click += new System.EventHandler(this.QuestConnectButtonClicked);
+            this.questConnectButton1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.questConnectButton1.Location = new System.Drawing.Point(3, 3);
+            this.questConnectButton1.Name = "questConnectButton1";
+            this.questConnectButton1.Size = new System.Drawing.Size(75, 25);
+            this.questConnectButton1.TabIndex = 3;
+            this.questConnectButton1.Text = "分岐させる";
+            this.questConnectButton1.UseVisualStyleBackColor = true;
+            this.questConnectButton1.Click += new System.EventHandler(this.QuestConnectButtonClicked);
             // 
-            // questEvents
+            // questSentence1
             // 
-            this.questEvents.FormattingEnabled = true;
-            this.questEvents.Location = new System.Drawing.Point(3, 112);
-            this.questEvents.Name = "questEvents";
-            this.questEvents.ScrollAlwaysVisible = true;
-            this.questEvents.Size = new System.Drawing.Size(106, 60);
-            this.questEvents.TabIndex = 1;
+            this.questSentence1.Location = new System.Drawing.Point(3, 34);
+            this.questSentence1.Multiline = true;
+            this.questSentence1.Name = "questSentence1";
+            this.questSentence1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.questSentence1.Size = new System.Drawing.Size(221, 72);
+            this.questSentence1.TabIndex = 0;
             // 
-            // questConditions
+            // questEvents1
             // 
-            this.questConditions.FormattingEnabled = true;
-            this.questConditions.Location = new System.Drawing.Point(115, 112);
-            this.questConditions.Name = "questConditions";
-            this.questConditions.ScrollAlwaysVisible = true;
-            this.questConditions.Size = new System.Drawing.Size(109, 60);
-            this.questConditions.TabIndex = 2;
+            this.questEvents1.FormattingEnabled = true;
+            this.questEvents1.Location = new System.Drawing.Point(3, 112);
+            this.questEvents1.Name = "questEvents1";
+            this.questEvents1.ScrollAlwaysVisible = true;
+            this.questEvents1.Size = new System.Drawing.Size(106, 60);
+            this.questEvents1.TabIndex = 1;
             // 
-            // questSpeaker
+            // questConditions1
             // 
-            this.questSpeaker.FormattingEnabled = true;
-            this.questSpeaker.ItemHeight = 12;
-            this.questSpeaker.Location = new System.Drawing.Point(3, 178);
-            this.questSpeaker.Name = "questSpeaker";
-            this.questSpeaker.ScrollAlwaysVisible = true;
-            this.questSpeaker.Size = new System.Drawing.Size(93, 16);
-            this.questSpeaker.TabIndex = 1;
+            this.questConditions1.FormattingEnabled = true;
+            this.questConditions1.Location = new System.Drawing.Point(115, 112);
+            this.questConditions1.Name = "questConditions1";
+            this.questConditions1.ScrollAlwaysVisible = true;
+            this.questConditions1.Size = new System.Drawing.Size(109, 60);
+            this.questConditions1.TabIndex = 2;
             // 
-            // questSentence
+            // questSpeaker1
             // 
-            this.questSentence.Location = new System.Drawing.Point(3, 34);
-            this.questSentence.Multiline = true;
-            this.questSentence.Name = "questSentence";
-            this.questSentence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.questSentence.Size = new System.Drawing.Size(221, 72);
-            this.questSentence.TabIndex = 0;
+            this.questSpeaker1.FormattingEnabled = true;
+            this.questSpeaker1.ItemHeight = 12;
+            this.questSpeaker1.Location = new System.Drawing.Point(3, 178);
+            this.questSpeaker1.Name = "questSpeaker1";
+            this.questSpeaker1.ScrollAlwaysVisible = true;
+            this.questSpeaker1.Size = new System.Drawing.Size(93, 16);
+            this.questSpeaker1.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -792,11 +792,11 @@
         private System.Windows.Forms.ToolStripMenuItem インポートToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 開くToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel questFlowPanel_ID1;
-        private System.Windows.Forms.TextBox questSentence;
-        private System.Windows.Forms.CheckedListBox questEvents;
-        private System.Windows.Forms.CheckedListBox questConditions;
-        private System.Windows.Forms.ListBox questSpeaker;
-        private System.Windows.Forms.Button questConnectButton;
+        private System.Windows.Forms.TextBox questSentence1;
+        private System.Windows.Forms.CheckedListBox questEvents1;
+        private System.Windows.Forms.CheckedListBox questConditions1;
+        private System.Windows.Forms.ListBox questSpeaker1;
+        private System.Windows.Forms.Button questConnectButton1;
         private System.Windows.Forms.DataGridView npcListDataView;
         private System.Windows.Forms.BindingSource nPCDataTableBindingSource;
         private datas.DataSet1 dataSet1;
