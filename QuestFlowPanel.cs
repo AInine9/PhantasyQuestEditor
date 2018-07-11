@@ -1,13 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PhantasyQuestEditor {
     class QuestFlowPanel {
+        private FlowLayoutPanel panel;
+        private Button button;
+        private CheckedListBox events;
+        private CheckedListBox conditions;
+        private ListBox speaker;
+        private TextBox sentence;
+        private Label number;
 
         public QuestFlowPanel(Point mouseLocation, int ID, EventHandler clickedEvent) {
             panel = new FlowLayoutPanel();
@@ -16,6 +19,7 @@ namespace PhantasyQuestEditor {
             conditions = new CheckedListBox();
             speaker = new ListBox();
             sentence = new TextBox();
+            number = new Label();
 
             ID = ID + 1;
             // 
@@ -26,6 +30,7 @@ namespace PhantasyQuestEditor {
             panel.Controls.Add(sentence);
             panel.Controls.Add(events);
             panel.Controls.Add(conditions);
+            panel.Controls.Add(number);
             panel.Controls.Add(speaker);
             panel.Location = mouseLocation;
             panel.Name = "questFlowPanel_ID" + ID;
@@ -75,6 +80,16 @@ namespace PhantasyQuestEditor {
             button.UseVisualStyleBackColor = true;
             button.Click += new EventHandler(clickedEvent);
             button.Show();
+            // 
+            // conversationNumber
+            // 
+            number.AutoSize = true;
+            number.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
+            number.Location = new System.Drawing.Point(102, 175);
+            number.Name = "conversationNumber";
+            number.Size = new System.Drawing.Size(15, 15);
+            number.TabIndex = 4;
+            number.Text = ID.ToString();
 
 
             panel.ResumeLayout(false);
@@ -92,12 +107,5 @@ namespace PhantasyQuestEditor {
         public CheckedListBox getEventsList() {
             return this.events;
         }
-
-        private FlowLayoutPanel panel;
-        private Button button;
-        private CheckedListBox events;
-        private CheckedListBox conditions;
-        private ListBox speaker;
-        private TextBox sentence;
     }
 }

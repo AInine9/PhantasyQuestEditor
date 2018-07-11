@@ -90,6 +90,7 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conversationNumber = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -274,6 +275,7 @@
             this.questFlowPanel_ID1.Controls.Add(this.questSentence1);
             this.questFlowPanel_ID1.Controls.Add(this.questEvents1);
             this.questFlowPanel_ID1.Controls.Add(this.questConditions1);
+            this.questFlowPanel_ID1.Controls.Add(this.conversationNumber);
             this.questFlowPanel_ID1.Controls.Add(this.questSpeaker1);
             this.questFlowPanel_ID1.Location = new System.Drawing.Point(6, 6);
             this.questFlowPanel_ID1.Name = "questFlowPanel_ID1";
@@ -322,7 +324,7 @@
             // 
             this.questSpeaker1.FormattingEnabled = true;
             this.questSpeaker1.ItemHeight = 12;
-            this.questSpeaker1.Location = new System.Drawing.Point(3, 178);
+            this.questSpeaker1.Location = new System.Drawing.Point(24, 178);
             this.questSpeaker1.Name = "questSpeaker1";
             this.questSpeaker1.ScrollAlwaysVisible = true;
             this.questSpeaker1.Size = new System.Drawing.Size(93, 16);
@@ -722,6 +724,16 @@
             this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
             // 
+            // conversationNumber
+            // 
+            this.conversationNumber.AutoSize = true;
+            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.conversationNumber.Location = new System.Drawing.Point(3, 175);
+            this.conversationNumber.Name = "conversationNumber";
+            this.conversationNumber.Size = new System.Drawing.Size(15, 15);
+            this.conversationNumber.TabIndex = 4;
+            this.conversationNumber.Text = "1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -837,6 +849,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 会話番号DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn 会話文DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource startPointDataTableBindingSource;
+        private System.Windows.Forms.Label conversationNumber;
     }
 }
 
