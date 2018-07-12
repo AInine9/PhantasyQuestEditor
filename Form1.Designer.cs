@@ -45,6 +45,7 @@
             this.questSentence1 = new System.Windows.Forms.TextBox();
             this.questEvents1 = new System.Windows.Forms.CheckedListBox();
             this.questConditions1 = new System.Windows.Forms.CheckedListBox();
+            this.conversationNumber = new System.Windows.Forms.Label();
             this.questSpeaker1 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.objectiveArgument2 = new System.Windows.Forms.ListBox();
@@ -90,7 +91,6 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conversationNumber = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -319,6 +319,16 @@
             this.questConditions1.ScrollAlwaysVisible = true;
             this.questConditions1.Size = new System.Drawing.Size(109, 60);
             this.questConditions1.TabIndex = 2;
+            // 
+            // conversationNumber
+            // 
+            this.conversationNumber.AutoSize = true;
+            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.conversationNumber.Location = new System.Drawing.Point(3, 175);
+            this.conversationNumber.Name = "conversationNumber";
+            this.conversationNumber.Size = new System.Drawing.Size(15, 15);
+            this.conversationNumber.TabIndex = 4;
+            this.conversationNumber.Text = "1";
             // 
             // questSpeaker1
             // 
@@ -703,36 +713,27 @@
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             // 
             // エクスポートToolStripMenuItem
             // 
             this.エクスポートToolStripMenuItem.Name = "エクスポートToolStripMenuItem";
-            this.エクスポートToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.エクスポートToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.エクスポートToolStripMenuItem.Text = "エクスポート";
+            this.エクスポートToolStripMenuItem.Click += new System.EventHandler(this.ExportEvent);
             // 
             // インポートToolStripMenuItem
             // 
             this.インポートToolStripMenuItem.Name = "インポートToolStripMenuItem";
-            this.インポートToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.インポートToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.インポートToolStripMenuItem.Text = "インポート";
             // 
             // 開くToolStripMenuItem
             // 
             this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
-            this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.開くToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.開くToolStripMenuItem.Text = "開く";
-            // 
-            // conversationNumber
-            // 
-            this.conversationNumber.AutoSize = true;
-            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.conversationNumber.Location = new System.Drawing.Point(3, 175);
-            this.conversationNumber.Name = "conversationNumber";
-            this.conversationNumber.Size = new System.Drawing.Size(15, 15);
-            this.conversationNumber.TabIndex = 4;
-            this.conversationNumber.Text = "1";
             // 
             // Form1
             // 
