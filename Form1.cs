@@ -8,7 +8,6 @@ namespace PhantasyQuestEditor {
         private Point startLocation, endLocation;
         private Pen blackPen = new Pen(Color.Black, 5);
         private Graphics graphics;
-        private int panelID;
 
         public Form1() {
             InitializeComponent();
@@ -23,8 +22,6 @@ namespace PhantasyQuestEditor {
             startLocation = tabPage2.PointToClient(clickedButton.PointToScreen(clickedButton.Location));
 
             graphics = tabPage2.CreateGraphics();
-
-            panelID = Int32.Parse(parentPanel.Name.Replace("questFlowPanel_ID", ""));
         }
 
         private void ExportEvent(object sender, EventArgs e) {
@@ -63,7 +60,18 @@ namespace PhantasyQuestEditor {
                 graphics.Dispose();
                 graphics = null;
 
-                QuestFlowPanel questFlowPanel = new QuestFlowPanel(endLocation, panelID, this.QuestConnectButtonClicked);
+                int maxConversationID = 0;
+                Control[] controls = tabPage2.Controls.Find("conversationNumber", true);
+                
+                foreach (Control control in controls) {
+                    if (Int32.Parse(control.Text) > maxConversationID) {
+                        maxConversationID = Int32.Parse(control.Text);
+                    }
+                }
+
+                int nextConversationID = maxConversationID + 1;
+
+                QuestFlowPanel questFlowPanel = new QuestFlowPanel(endLocation, nextConversationID, this.QuestConnectButtonClicked);
                 FlowLayoutPanel panel = questFlowPanel.getQuestFlowPanel();
 
                 tabPage2.Controls.Add(panel);

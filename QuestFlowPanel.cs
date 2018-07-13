@@ -20,8 +20,6 @@ namespace PhantasyQuestEditor {
             speaker = new ListBox();
             sentence = new TextBox();
             number = new Label();
-
-            ID = ID + 1;
             // 
             // questFlowPanel
             // 
