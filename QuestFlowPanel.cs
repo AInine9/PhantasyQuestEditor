@@ -10,7 +10,7 @@ namespace PhantasyQuestEditor {
         private CheckedListBox conditions;
         private ListBox speaker;
         private TextBox sentence;
-        private Label number;
+        private Label number, nextConversationNumber;
 
         public QuestFlowPanel(Point mouseLocation, int ID, EventHandler clickedEvent) {
             panel = new FlowLayoutPanel();
@@ -20,6 +20,7 @@ namespace PhantasyQuestEditor {
             speaker = new ListBox();
             sentence = new TextBox();
             number = new Label();
+            nextConversationNumber = new Label();
             // 
             // questFlowPanel
             // 
@@ -30,6 +31,7 @@ namespace PhantasyQuestEditor {
             panel.Controls.Add(conditions);
             panel.Controls.Add(number);
             panel.Controls.Add(speaker);
+            panel.Controls.Add(nextConversationNumber);
             panel.Location = mouseLocation;
             panel.Name = "questFlowPanel_ID" + ID;
             panel.Size = new Size(230, 196);
@@ -88,6 +90,16 @@ namespace PhantasyQuestEditor {
             number.Size = new System.Drawing.Size(15, 15);
             number.TabIndex = 4;
             number.Text = ID.ToString();
+            // 
+            // nextConversationNumber
+            // 
+            nextConversationNumber.AutoSize = true;
+            nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
+            nextConversationNumber.Location = new System.Drawing.Point(123, 175);
+            nextConversationNumber.Name = "nextConversationNumber";
+            nextConversationNumber.Size = new System.Drawing.Size(45, 15);
+            nextConversationNumber.TabIndex = 5;
+            nextConversationNumber.Text = "Next: ";
 
 
             panel.ResumeLayout(false);

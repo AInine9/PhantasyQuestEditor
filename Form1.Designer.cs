@@ -91,6 +91,7 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextConversationNumber = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -277,6 +278,7 @@
             this.questFlowPanel_ID1.Controls.Add(this.questConditions1);
             this.questFlowPanel_ID1.Controls.Add(this.conversationNumber);
             this.questFlowPanel_ID1.Controls.Add(this.questSpeaker1);
+            this.questFlowPanel_ID1.Controls.Add(this.nextConversationNumber);
             this.questFlowPanel_ID1.Location = new System.Drawing.Point(6, 6);
             this.questFlowPanel_ID1.Name = "questFlowPanel_ID1";
             this.questFlowPanel_ID1.Size = new System.Drawing.Size(230, 196);
@@ -713,27 +715,37 @@
             // 保存ToolStripMenuItem
             // 
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
-            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.保存ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.保存ToolStripMenuItem.Text = "保存";
             // 
             // エクスポートToolStripMenuItem
             // 
             this.エクスポートToolStripMenuItem.Name = "エクスポートToolStripMenuItem";
-            this.エクスポートToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.エクスポートToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.エクスポートToolStripMenuItem.Text = "エクスポート";
             this.エクスポートToolStripMenuItem.Click += new System.EventHandler(this.ExportEvent);
             // 
             // インポートToolStripMenuItem
             // 
             this.インポートToolStripMenuItem.Name = "インポートToolStripMenuItem";
-            this.インポートToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.インポートToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.インポートToolStripMenuItem.Text = "インポート";
             // 
             // 開くToolStripMenuItem
             // 
             this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
-            this.開くToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
+            // 
+            // nextConversationNumber
+            // 
+            this.nextConversationNumber.AutoSize = true;
+            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
+            this.nextConversationNumber.Name = "nextConversationNumber";
+            this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
+            this.nextConversationNumber.TabIndex = 5;
+            this.nextConversationNumber.Text = "Next: ";
             // 
             // Form1
             // 
@@ -851,6 +863,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 会話文DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource startPointDataTableBindingSource;
         private System.Windows.Forms.Label conversationNumber;
+        private System.Windows.Forms.Label nextConversationNumber;
     }
 }
 

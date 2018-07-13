@@ -8,6 +8,7 @@ namespace PhantasyQuestEditor {
         private Point startLocation, endLocation;
         private Pen blackPen = new Pen(Color.Black, 5);
         private Graphics graphics;
+        private Control[] nextConversationLabel;
 
         public Form1() {
             InitializeComponent();
@@ -16,8 +17,9 @@ namespace PhantasyQuestEditor {
         }
 
         public void QuestConnectButtonClicked(object sender, EventArgs e) {
-            Control clickedButton = (Control)sender;
+            Control clickedButton = (Control) sender;
             Control parentPanel = clickedButton.Parent;
+            nextConversationLabel = clickedButton.Parent.Controls.Find("nextConversationNumber", false);
 
             startLocation = tabPage2.PointToClient(clickedButton.PointToScreen(clickedButton.Location));
 
@@ -32,7 +34,7 @@ namespace PhantasyQuestEditor {
             dialog.FilterIndex = 1;
             dialog.Title = "保存先";
             dialog.RestoreDirectory = true;
-             if (dialog.ShowDialog() == DialogResult.OK) {
+            if (dialog.ShowDialog() == DialogResult.OK) {
                 ExportQuest(dialog);
             }
         }
@@ -49,7 +51,7 @@ namespace PhantasyQuestEditor {
         }
 
         private void MousePressed(object sender, MouseEventArgs e) {
-            Control pressedControl = (Control)sender;
+            Control pressedControl = (Control) sender;
             String name = pressedControl.Name;
 
             if (graphics != null && name.Equals("tabPage2")) {
@@ -62,7 +64,7 @@ namespace PhantasyQuestEditor {
 
                 int maxConversationID = 0;
                 Control[] controls = tabPage2.Controls.Find("conversationNumber", true);
-                
+
                 foreach (Control control in controls) {
                     if (Int32.Parse(control.Text) > maxConversationID) {
                         maxConversationID = Int32.Parse(control.Text);
@@ -75,6 +77,9 @@ namespace PhantasyQuestEditor {
                 FlowLayoutPanel panel = questFlowPanel.getQuestFlowPanel();
 
                 tabPage2.Controls.Add(panel);
+
+                nextConversationLabel[0].Text = nextConversationLabel[0].Text + "," + nextConversationID;
+                nextConversationLabel = null;
             }
         }
     }
