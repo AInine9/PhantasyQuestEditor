@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhantasyQuestEditor.fileManager;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -44,18 +45,9 @@ namespace PhantasyQuestEditor {
             dialog.Title = "保存先";
             dialog.RestoreDirectory = true;
             if (dialog.ShowDialog() == DialogResult.OK) {
-                ExportQuest(dialog);
-            }
-        }
+                Exporter exporter = new Exporter(dialog, this);
 
-        public void ExportQuest(SaveFileDialog dialog) {
-            System.IO.Stream stream;
-            stream = dialog.OpenFile();
-            if (stream != null) {
-                System.IO.StreamWriter writer = new System.IO.StreamWriter(stream);
-                writer.Write("Name: " + this.questNameLabel.Text);
-                writer.Close();
-                stream.Close();
+                exporter.ExportQuest();
             }
         }
 
@@ -92,6 +84,10 @@ namespace PhantasyQuestEditor {
                 nextConversationLabel[0].Text = nextConversationLabel[0].Text + "," + nextConversationID;
                 nextConversationLabel = null;
             }
+        }
+
+        public TextBox getQuestNameLabel() {
+            return this.questNameLabel;
         }
     }
 }

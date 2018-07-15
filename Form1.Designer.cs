@@ -245,6 +245,7 @@
             // 
             // questNameLabel
             // 
+            this.questNameLabel.AccessibleName = "";
             this.questNameLabel.Location = new System.Drawing.Point(10, 23);
             this.questNameLabel.Name = "questNameLabel";
             this.questNameLabel.Size = new System.Drawing.Size(208, 19);
@@ -819,7 +820,6 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox questNameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -880,6 +880,7 @@
         private System.Windows.Forms.Label conversationNumber;
         private System.Windows.Forms.Label nextConversationNumber;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.TextBox questNameLabel;
     }
 }
 
