@@ -47,6 +47,8 @@
             this.questConditions1 = new System.Windows.Forms.CheckedListBox();
             this.conversationNumber = new System.Windows.Forms.Label();
             this.questSpeaker1 = new System.Windows.Forms.ListBox();
+            this.nextConversationNumber = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.objectiveArgument2 = new System.Windows.Forms.ListBox();
             this.objectiveArgument1 = new System.Windows.Forms.ListBox();
@@ -91,7 +93,6 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nextConversationNumber = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.questFlowPanel_ID1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).BeginInit();
@@ -259,9 +261,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
             this.tabPage2.Controls.Add(this.questFlowPanel_ID1);
+            this.tabPage2.Controls.Add(this.pictureBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -341,6 +343,27 @@
             this.questSpeaker1.ScrollAlwaysVisible = true;
             this.questSpeaker1.Size = new System.Drawing.Size(93, 16);
             this.questSpeaker1.TabIndex = 1;
+            // 
+            // nextConversationNumber
+            // 
+            this.nextConversationNumber.AutoSize = true;
+            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
+            this.nextConversationNumber.Name = "nextConversationNumber";
+            this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
+            this.nextConversationNumber.TabIndex = 5;
+            this.nextConversationNumber.Text = "Next: ";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(890, 485);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox.TabIndex = 1;
+            this.pictureBox.TabStop = false;
             // 
             // tabPage3
             // 
@@ -737,16 +760,6 @@
             this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
             // 
-            // nextConversationNumber
-            // 
-            this.nextConversationNumber.AutoSize = true;
-            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
-            this.nextConversationNumber.Name = "nextConversationNumber";
-            this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
-            this.nextConversationNumber.TabIndex = 5;
-            this.nextConversationNumber.Text = "Next: ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -765,8 +778,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.questFlowPanel_ID1.ResumeLayout(false);
             this.questFlowPanel_ID1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).EndInit();
@@ -864,6 +879,7 @@
         private System.Windows.Forms.BindingSource startPointDataTableBindingSource;
         private System.Windows.Forms.Label conversationNumber;
         private System.Windows.Forms.Label nextConversationNumber;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 

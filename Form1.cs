@@ -9,11 +9,15 @@ namespace PhantasyQuestEditor {
         private Pen blackPen = new Pen(Color.Black, 5);
         private Graphics graphics;
         private Control[] nextConversationLabel;
+        private Bitmap bitmap;
 
         public Form1() {
             InitializeComponent();
 
-            tabPage2.MouseDown += new MouseEventHandler(MousePressed);
+            pictureBox.MouseDown += new MouseEventHandler(MousePressed);
+
+            bitmap = new Bitmap(1920, 1080);
+            pictureBox.Image = bitmap;
         }
 
         public void QuestConnectButtonClicked(object sender, EventArgs e) {
@@ -21,9 +25,9 @@ namespace PhantasyQuestEditor {
             Control parentPanel = clickedButton.Parent;
             nextConversationLabel = clickedButton.Parent.Controls.Find("nextConversationNumber", false);
 
-            startLocation = tabPage2.PointToClient(clickedButton.PointToScreen(clickedButton.Location));
+            startLocation = pictureBox.PointToClient(clickedButton.PointToScreen(clickedButton.Location));
 
-            graphics = tabPage2.CreateGraphics();
+            graphics = Graphics.FromImage(pictureBox.Image);
         }
 
         private void ExportEvent(object sender, EventArgs e) {
@@ -54,10 +58,11 @@ namespace PhantasyQuestEditor {
             Control pressedControl = (Control) sender;
             String name = pressedControl.Name;
 
-            if (graphics != null && name.Equals("tabPage2")) {
+            if (graphics != null && name.Equals("pictureBox")) {
                 endLocation = new Point(e.X, e.Y);
 
                 graphics.DrawLine(blackPen, startLocation, endLocation);
+                pictureBox.Refresh();
 
                 graphics.Dispose();
                 graphics = null;
@@ -77,6 +82,7 @@ namespace PhantasyQuestEditor {
                 FlowLayoutPanel panel = questFlowPanel.getQuestFlowPanel();
 
                 tabPage2.Controls.Add(panel);
+                panel.BringToFront();
 
                 nextConversationLabel[0].Text = nextConversationLabel[0].Text + "," + nextConversationID;
                 nextConversationLabel = null;
