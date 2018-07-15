@@ -28,7 +28,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.startPointListView = new System.Windows.Forms.DataGridView();
             this.会話番号DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.会話文DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startPointDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new PhantasyQuestEditor.datas.DataSet1();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,7 +63,7 @@
             this.eventArgument1 = new System.Windows.Forms.ListBox();
             this.eventNameList = new System.Windows.Forms.ListBox();
             this.addEventButton = new System.Windows.Forms.Button();
-            this.EventDataListView = new System.Windows.Forms.DataGridView();
+            this.eventDataListView = new System.Windows.Forms.DataGridView();
             this.イベントDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet13 = new PhantasyQuestEditor.datas.DataSet1();
@@ -95,37 +94,37 @@
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.startPointListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.startPointDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.npcListDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.nPCDataTableBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.questFlowPanel_ID1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet11)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EventDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.eventDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.eventDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet13)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.conditionDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.conditionDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet12)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.journalDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.journalDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet14)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
@@ -160,8 +159,7 @@
             this.startPointListView.AutoGenerateColumns = false;
             this.startPointListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.startPointListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.会話番号DataGridViewTextBoxColumn,
-            this.会話文DataGridViewTextBoxColumn});
+            this.会話番号DataGridViewTextBoxColumn});
             this.startPointListView.DataSource = this.startPointDataTableBindingSource;
             this.startPointListView.Location = new System.Drawing.Point(14, 274);
             this.startPointListView.Name = "startPointListView";
@@ -171,16 +169,10 @@
             // 
             // 会話番号DataGridViewTextBoxColumn
             // 
+            this.会話番号DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.会話番号DataGridViewTextBoxColumn.DataPropertyName = "会話番号";
             this.会話番号DataGridViewTextBoxColumn.HeaderText = "会話番号";
             this.会話番号DataGridViewTextBoxColumn.Name = "会話番号DataGridViewTextBoxColumn";
-            // 
-            // 会話文DataGridViewTextBoxColumn
-            // 
-            this.会話文DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.会話文DataGridViewTextBoxColumn.DataPropertyName = "会話文";
-            this.会話文DataGridViewTextBoxColumn.HeaderText = "会話文";
-            this.会話文DataGridViewTextBoxColumn.Name = "会話文DataGridViewTextBoxColumn";
             // 
             // startPointDataTableBindingSource
             // 
@@ -289,7 +281,7 @@
             // 
             // questConnectButton1
             // 
-            this.questConnectButton1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.questConnectButton1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
             this.questConnectButton1.Location = new System.Drawing.Point(3, 3);
             this.questConnectButton1.Name = "questConnectButton1";
             this.questConnectButton1.Size = new System.Drawing.Size(75, 25);
@@ -328,7 +320,7 @@
             // conversationNumber
             // 
             this.conversationNumber.AutoSize = true;
-            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
             this.conversationNumber.Location = new System.Drawing.Point(3, 175);
             this.conversationNumber.Name = "conversationNumber";
             this.conversationNumber.Size = new System.Drawing.Size(15, 15);
@@ -348,7 +340,7 @@
             // nextConversationNumber
             // 
             this.nextConversationNumber.AutoSize = true;
-            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
             this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
             this.nextConversationNumber.Name = "nextConversationNumber";
             this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
@@ -466,7 +458,7 @@
             this.tabPage4.Controls.Add(this.eventArgument1);
             this.tabPage4.Controls.Add(this.eventNameList);
             this.tabPage4.Controls.Add(this.addEventButton);
-            this.tabPage4.Controls.Add(this.EventDataListView);
+            this.tabPage4.Controls.Add(this.eventDataListView);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -513,18 +505,18 @@
             this.addEventButton.Text = "イベントを追加する";
             this.addEventButton.UseVisualStyleBackColor = true;
             // 
-            // EventDataListView
+            // eventDataListView
             // 
-            this.EventDataListView.AutoGenerateColumns = false;
-            this.EventDataListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EventDataListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eventDataListView.AutoGenerateColumns = false;
+            this.eventDataListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.eventDataListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.イベントDataGridViewTextBoxColumn});
-            this.EventDataListView.DataSource = this.eventDataTableBindingSource;
-            this.EventDataListView.Location = new System.Drawing.Point(6, 204);
-            this.EventDataListView.Name = "EventDataListView";
-            this.EventDataListView.RowTemplate.Height = 21;
-            this.EventDataListView.Size = new System.Drawing.Size(880, 280);
-            this.EventDataListView.TabIndex = 2;
+            this.eventDataListView.DataSource = this.eventDataTableBindingSource;
+            this.eventDataListView.Location = new System.Drawing.Point(6, 204);
+            this.eventDataListView.Name = "eventDataListView";
+            this.eventDataListView.RowTemplate.Height = 21;
+            this.eventDataListView.Size = new System.Drawing.Size(880, 280);
+            this.eventDataListView.TabIndex = 2;
             // 
             // イベントDataGridViewTextBoxColumn
             // 
@@ -773,36 +765,36 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.startPointListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.startPointDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.npcListDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.nPCDataTableBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.questFlowPanel_ID1.ResumeLayout(false);
             this.questFlowPanel_ID1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet11)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EventDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.eventDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.eventDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet13)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.conditionDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.conditionDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet12)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.journalDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.journalDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataSet14)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -854,7 +846,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 条件DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource conditionDataTableBindingSource;
         private datas.DataSet1 dataSet12;
-        private System.Windows.Forms.DataGridView EventDataListView;
+        private System.Windows.Forms.DataGridView eventDataListView;
         private System.Windows.Forms.DataGridViewTextBoxColumn イベントDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource eventDataTableBindingSource;
         private datas.DataSet1 dataSet13;
@@ -874,13 +866,12 @@
         private datas.DataSet1 dataSet14;
         private System.Windows.Forms.DataGridView startPointListView;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 会話番号DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 会話文DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource startPointDataTableBindingSource;
         private System.Windows.Forms.Label conversationNumber;
         private System.Windows.Forms.Label nextConversationNumber;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.TextBox questNameLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 会話番号DataGridViewTextBoxColumn;
     }
 }
 

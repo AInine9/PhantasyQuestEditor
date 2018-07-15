@@ -89,5 +89,33 @@ namespace PhantasyQuestEditor {
         public TextBox getQuestNameLabel() {
             return this.questNameLabel;
         }
+
+        public DataGridView getNpcListDataView() {
+            return this.npcListDataView;
+        }
+
+        public DataGridView getStartPointListView() {
+            return this.startPointListView;
+        }
+
+        public TabPage getTabPage2() {
+            return this.tabPage2;
+        }
+
+        public DataGridView getObjectiveDataListView() {
+            return this.objectiveDataListView;
+        }
+
+        public DataGridView getEventDataListView() {
+            return this.eventDataListView;
+        }
+
+        public DataGridView getConditionDataListView() {
+            return this.conditionDataListView;
+        }
+
+        public DataGridView getJournalDataListView() {
+            return this.journalDataListView;
+        }
     }
 }

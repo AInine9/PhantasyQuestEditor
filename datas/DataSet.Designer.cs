@@ -1705,8 +1705,6 @@ namespace PhantasyQuestEditor.datas {
             
             private global::System.Data.DataColumn column会話番号;
             
-            private global::System.Data.DataColumn column会話文;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public StartPointDataTableDataTable() {
@@ -1750,14 +1748,6 @@ namespace PhantasyQuestEditor.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn 会話文Column {
-                get {
-                    return this.column会話文;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1793,11 +1783,10 @@ namespace PhantasyQuestEditor.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StartPointDataTableRow AddStartPointDataTableRow(int 会話番号, string 会話文) {
+            public StartPointDataTableRow AddStartPointDataTableRow(int 会話番号) {
                 StartPointDataTableRow rowStartPointDataTableRow = ((StartPointDataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        会話番号,
-                        会話文};
+                        会話番号};
                 rowStartPointDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStartPointDataTableRow);
                 return rowStartPointDataTableRow;
@@ -1821,7 +1810,6 @@ namespace PhantasyQuestEditor.datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.column会話番号 = base.Columns["会話番号"];
-                this.column会話文 = base.Columns["会話文"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1829,8 +1817,6 @@ namespace PhantasyQuestEditor.datas {
             private void InitClass() {
                 this.column会話番号 = new global::System.Data.DataColumn("会話番号", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column会話番号);
-                this.column会話文 = new global::System.Data.DataColumn("会話文", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column会話文);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2232,22 +2218,6 @@ namespace PhantasyQuestEditor.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string 会話文 {
-                get {
-                    try {
-                        return ((string)(this[this.tableStartPointDataTable.会話文Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'StartPointDataTable\' にある列 \'会話文\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableStartPointDataTable.会話文Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is会話番号Null() {
                 return this.IsNull(this.tableStartPointDataTable.会話番号Column);
             }
@@ -2256,18 +2226,6 @@ namespace PhantasyQuestEditor.datas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set会話番号Null() {
                 this[this.tableStartPointDataTable.会話番号Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Is会話文Null() {
-                return this.IsNull(this.tableStartPointDataTable.会話文Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Set会話文Null() {
-                this[this.tableStartPointDataTable.会話文Column] = global::System.Convert.DBNull;
             }
         }
         
