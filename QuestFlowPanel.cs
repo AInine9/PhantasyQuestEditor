@@ -12,7 +12,7 @@ namespace PhantasyQuestEditor {
         private TextBox sentence;
         private Label number, nextConversationNumber;
 
-        public QuestFlowPanel(Point mouseLocation, int ID, EventHandler clickedEvent) {
+        public QuestFlowPanel(Point mouseLocation, int ID, EventHandler clickedEvent, EventHandler panelClickedEvent) {
             panel = new FlowLayoutPanel();
             button = new Button();
             events = new CheckedListBox();
@@ -36,6 +36,7 @@ namespace PhantasyQuestEditor {
             panel.Name = "questFlowPanel_ID" + ID;
             panel.Size = new Size(230, 196);
             panel.TabIndex = 0;
+            panel.Click += new EventHandler(panelClickedEvent);
             // 
             // questEvents
             // 

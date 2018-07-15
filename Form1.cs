@@ -30,6 +30,11 @@ namespace PhantasyQuestEditor {
             graphics = Graphics.FromImage(pictureBox.Image);
         }
 
+        public void PanelClicked(object sender, EventArgs e) {
+            Control panel = (Control) sender;
+            panel.BringToFront();
+        }
+
         private void ExportEvent(object sender, EventArgs e) {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.FileName = this.questNameLabel.Text + ".yml";
@@ -78,7 +83,7 @@ namespace PhantasyQuestEditor {
 
                 int nextConversationID = maxConversationID + 1;
 
-                QuestFlowPanel questFlowPanel = new QuestFlowPanel(endLocation, nextConversationID, this.QuestConnectButtonClicked);
+                QuestFlowPanel questFlowPanel = new QuestFlowPanel(endLocation, nextConversationID, this.QuestConnectButtonClicked, this.PanelClicked);
                 FlowLayoutPanel panel = questFlowPanel.getQuestFlowPanel();
 
                 tabPage2.Controls.Add(panel);
