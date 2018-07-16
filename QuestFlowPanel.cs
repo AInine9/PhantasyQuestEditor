@@ -33,7 +33,7 @@ namespace PhantasyQuestEditor {
             panel.Controls.Add(speaker);
             panel.Controls.Add(nextConversationNumber);
             panel.Location = mouseLocation;
-            panel.Name = "questFlowPanel_ID" + ID;
+            panel.Name = "questFlowPanel";
             panel.Size = new Size(230, 196);
             panel.TabIndex = 0;
             panel.Click += new EventHandler(panelClickedEvent);
@@ -41,7 +41,7 @@ namespace PhantasyQuestEditor {
             // questEvents
             // 
             events.FormattingEnabled = true;
-            events.Name = "questEvents" + ID;
+            events.Name = "questEvents";
             events.ScrollAlwaysVisible = true;
             events.Size = new Size(106, 60);
             events.TabIndex = 1;
@@ -49,7 +49,7 @@ namespace PhantasyQuestEditor {
             // questConditions
             // 
             conditions.FormattingEnabled = true;
-            conditions.Name = "questConditions" + ID;
+            conditions.Name = "questConditions";
             conditions.ScrollAlwaysVisible = true;
             conditions.Size = new Size(109, 60);
             conditions.TabIndex = 2;
@@ -58,7 +58,7 @@ namespace PhantasyQuestEditor {
             // 
             speaker.FormattingEnabled = true;
             speaker.ItemHeight = 12;
-            speaker.Name = "questSpeaker" + ID;
+            speaker.Name = "questSpeaker";
             speaker.ScrollAlwaysVisible = true;
             speaker.Size = new Size(93, 16);
             speaker.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace PhantasyQuestEditor {
             // questSentence
             // 
             sentence.Multiline = true;
-            sentence.Name = "questSentence" + ID;
+            sentence.Name = "questSentence";
             sentence.ScrollBars = ScrollBars.Vertical;
             sentence.Size = new Size(221, 72);
             sentence.TabIndex = 0;
@@ -74,7 +74,7 @@ namespace PhantasyQuestEditor {
             // questConnectButton
             // 
             button.Font = new Font("MS UI Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte) (128)));
-            button.Name = "questConnectButton" + ID;
+            button.Name = "questConnectButton";
             button.Size = new Size(75, 25);
             button.TabIndex = 3;
             button.Text = "分岐させる";

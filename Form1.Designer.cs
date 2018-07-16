@@ -39,13 +39,13 @@
             this.questNameLabel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.questFlowPanel_ID1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.questConnectButton1 = new System.Windows.Forms.Button();
-            this.questSentence1 = new System.Windows.Forms.TextBox();
-            this.questEvents1 = new System.Windows.Forms.CheckedListBox();
-            this.questConditions1 = new System.Windows.Forms.CheckedListBox();
+            this.questFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.questConnectButton = new System.Windows.Forms.Button();
+            this.questSentence = new System.Windows.Forms.TextBox();
+            this.questEvents = new System.Windows.Forms.CheckedListBox();
+            this.questConditions = new System.Windows.Forms.CheckedListBox();
             this.conversationNumber = new System.Windows.Forms.Label();
-            this.questSpeaker1 = new System.Windows.Forms.ListBox();
+            this.questSpeaker = new System.Windows.Forms.ListBox();
             this.nextConversationNumber = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -94,37 +94,37 @@
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.startPointListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.startPointDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.npcListDataView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.nPCDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.questFlowPanel_ID1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox)).BeginInit();
+            this.questFlowPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.eventDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.eventDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.conditionDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.conditionDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.journalDataListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.journalDataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
@@ -255,7 +255,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
-            this.tabPage2.Controls.Add(this.questFlowPanel_ID1);
+            this.tabPage2.Controls.Add(this.questFlowPanel);
             this.tabPage2.Controls.Add(this.pictureBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -264,83 +264,83 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "フローチャート";
             // 
-            // questFlowPanel_ID1
+            // questFlowPanel
             // 
-            this.questFlowPanel_ID1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.questFlowPanel_ID1.Controls.Add(this.questConnectButton1);
-            this.questFlowPanel_ID1.Controls.Add(this.questSentence1);
-            this.questFlowPanel_ID1.Controls.Add(this.questEvents1);
-            this.questFlowPanel_ID1.Controls.Add(this.questConditions1);
-            this.questFlowPanel_ID1.Controls.Add(this.conversationNumber);
-            this.questFlowPanel_ID1.Controls.Add(this.questSpeaker1);
-            this.questFlowPanel_ID1.Controls.Add(this.nextConversationNumber);
-            this.questFlowPanel_ID1.Location = new System.Drawing.Point(6, 6);
-            this.questFlowPanel_ID1.Name = "questFlowPanel_ID1";
-            this.questFlowPanel_ID1.Size = new System.Drawing.Size(230, 196);
-            this.questFlowPanel_ID1.TabIndex = 0;
+            this.questFlowPanel.BackColor = System.Drawing.Color.DarkSalmon;
+            this.questFlowPanel.Controls.Add(this.questConnectButton);
+            this.questFlowPanel.Controls.Add(this.questSentence);
+            this.questFlowPanel.Controls.Add(this.questEvents);
+            this.questFlowPanel.Controls.Add(this.questConditions);
+            this.questFlowPanel.Controls.Add(this.conversationNumber);
+            this.questFlowPanel.Controls.Add(this.questSpeaker);
+            this.questFlowPanel.Controls.Add(this.nextConversationNumber);
+            this.questFlowPanel.Location = new System.Drawing.Point(6, 6);
+            this.questFlowPanel.Name = "questFlowPanel";
+            this.questFlowPanel.Size = new System.Drawing.Size(230, 196);
+            this.questFlowPanel.TabIndex = 0;
             // 
-            // questConnectButton1
+            // questConnectButton
             // 
-            this.questConnectButton1.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
-            this.questConnectButton1.Location = new System.Drawing.Point(3, 3);
-            this.questConnectButton1.Name = "questConnectButton1";
-            this.questConnectButton1.Size = new System.Drawing.Size(75, 25);
-            this.questConnectButton1.TabIndex = 3;
-            this.questConnectButton1.Text = "分岐させる";
-            this.questConnectButton1.UseVisualStyleBackColor = true;
-            this.questConnectButton1.Click += new System.EventHandler(this.QuestConnectButtonClicked);
+            this.questConnectButton.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.questConnectButton.Location = new System.Drawing.Point(3, 3);
+            this.questConnectButton.Name = "questConnectButton";
+            this.questConnectButton.Size = new System.Drawing.Size(75, 25);
+            this.questConnectButton.TabIndex = 3;
+            this.questConnectButton.Text = "分岐させる";
+            this.questConnectButton.UseVisualStyleBackColor = true;
+            this.questConnectButton.Click += new System.EventHandler(this.QuestConnectButtonClicked);
             // 
-            // questSentence1
+            // questSentence
             // 
-            this.questSentence1.Location = new System.Drawing.Point(3, 34);
-            this.questSentence1.Multiline = true;
-            this.questSentence1.Name = "questSentence1";
-            this.questSentence1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.questSentence1.Size = new System.Drawing.Size(221, 72);
-            this.questSentence1.TabIndex = 0;
+            this.questSentence.Location = new System.Drawing.Point(3, 34);
+            this.questSentence.Multiline = true;
+            this.questSentence.Name = "questSentence";
+            this.questSentence.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.questSentence.Size = new System.Drawing.Size(221, 72);
+            this.questSentence.TabIndex = 0;
             // 
-            // questEvents1
+            // questEvents
             // 
-            this.questEvents1.FormattingEnabled = true;
-            this.questEvents1.Location = new System.Drawing.Point(3, 112);
-            this.questEvents1.Name = "questEvents1";
-            this.questEvents1.ScrollAlwaysVisible = true;
-            this.questEvents1.Size = new System.Drawing.Size(106, 60);
-            this.questEvents1.TabIndex = 1;
+            this.questEvents.FormattingEnabled = true;
+            this.questEvents.Location = new System.Drawing.Point(3, 112);
+            this.questEvents.Name = "questEvents";
+            this.questEvents.ScrollAlwaysVisible = true;
+            this.questEvents.Size = new System.Drawing.Size(106, 60);
+            this.questEvents.TabIndex = 1;
             // 
-            // questConditions1
+            // questConditions
             // 
-            this.questConditions1.FormattingEnabled = true;
-            this.questConditions1.Location = new System.Drawing.Point(115, 112);
-            this.questConditions1.Name = "questConditions1";
-            this.questConditions1.ScrollAlwaysVisible = true;
-            this.questConditions1.Size = new System.Drawing.Size(109, 60);
-            this.questConditions1.TabIndex = 2;
+            this.questConditions.FormattingEnabled = true;
+            this.questConditions.Location = new System.Drawing.Point(115, 112);
+            this.questConditions.Name = "questConditions";
+            this.questConditions.ScrollAlwaysVisible = true;
+            this.questConditions.Size = new System.Drawing.Size(109, 60);
+            this.questConditions.TabIndex = 2;
             // 
             // conversationNumber
             // 
             this.conversationNumber.AutoSize = true;
-            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
+            this.conversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.conversationNumber.Location = new System.Drawing.Point(3, 175);
             this.conversationNumber.Name = "conversationNumber";
             this.conversationNumber.Size = new System.Drawing.Size(15, 15);
             this.conversationNumber.TabIndex = 4;
             this.conversationNumber.Text = "1";
             // 
-            // questSpeaker1
+            // questSpeaker
             // 
-            this.questSpeaker1.FormattingEnabled = true;
-            this.questSpeaker1.ItemHeight = 12;
-            this.questSpeaker1.Location = new System.Drawing.Point(24, 178);
-            this.questSpeaker1.Name = "questSpeaker1";
-            this.questSpeaker1.ScrollAlwaysVisible = true;
-            this.questSpeaker1.Size = new System.Drawing.Size(93, 16);
-            this.questSpeaker1.TabIndex = 1;
+            this.questSpeaker.FormattingEnabled = true;
+            this.questSpeaker.ItemHeight = 12;
+            this.questSpeaker.Location = new System.Drawing.Point(24, 178);
+            this.questSpeaker.Name = "questSpeaker";
+            this.questSpeaker.ScrollAlwaysVisible = true;
+            this.questSpeaker.Size = new System.Drawing.Size(93, 16);
+            this.questSpeaker.TabIndex = 1;
             // 
             // nextConversationNumber
             // 
             this.nextConversationNumber.AutoSize = true;
-            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (128)));
+            this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
             this.nextConversationNumber.Name = "nextConversationNumber";
             this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
@@ -765,36 +765,36 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.startPointListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.startPointDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.npcListDataView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.nPCDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startPointDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcListDataView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCDataTableBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.questFlowPanel_ID1.ResumeLayout(false);
-            this.questFlowPanel_ID1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox)).EndInit();
+            this.questFlowPanel.ResumeLayout(false);
+            this.questFlowPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.objectiveDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectiveDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.eventDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.eventDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet13)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.conditionDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.conditionDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conditionDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet12)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.journalDataListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.journalDataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.dataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalDataListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalDataTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet14)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -823,12 +823,12 @@
         private System.Windows.Forms.ToolStripMenuItem エクスポートToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem インポートToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 開くToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel questFlowPanel_ID1;
-        private System.Windows.Forms.TextBox questSentence1;
-        private System.Windows.Forms.CheckedListBox questEvents1;
-        private System.Windows.Forms.CheckedListBox questConditions1;
-        private System.Windows.Forms.ListBox questSpeaker1;
-        private System.Windows.Forms.Button questConnectButton1;
+        private System.Windows.Forms.FlowLayoutPanel questFlowPanel;
+        private System.Windows.Forms.TextBox questSentence;
+        private System.Windows.Forms.CheckedListBox questEvents;
+        private System.Windows.Forms.CheckedListBox questConditions;
+        private System.Windows.Forms.ListBox questSpeaker;
+        private System.Windows.Forms.Button questConnectButton;
         private System.Windows.Forms.DataGridView npcListDataView;
         private System.Windows.Forms.BindingSource nPCDataTableBindingSource;
         private datas.DataSet1 dataSet1;
