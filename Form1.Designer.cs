@@ -41,6 +41,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.questFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.questConnectButton = new System.Windows.Forms.Button();
+            this.questSpeaker = new System.Windows.Forms.ComboBox();
             this.questSentence = new System.Windows.Forms.TextBox();
             this.questEvents = new System.Windows.Forms.CheckedListBox();
             this.questConditions = new System.Windows.Forms.CheckedListBox();
@@ -91,7 +92,6 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.questSpeaker = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -290,6 +290,16 @@
             this.questConnectButton.Text = "分岐させる";
             this.questConnectButton.UseVisualStyleBackColor = true;
             this.questConnectButton.Click += new System.EventHandler(this.QuestConnectButtonClicked);
+            // 
+            // questSpeaker
+            // 
+            this.questSpeaker.FormattingEnabled = true;
+            this.questSpeaker.Items.AddRange(new object[] {
+            "player"});
+            this.questSpeaker.Location = new System.Drawing.Point(84, 3);
+            this.questSpeaker.Name = "questSpeaker";
+            this.questSpeaker.Size = new System.Drawing.Size(99, 20);
+            this.questSpeaker.TabIndex = 6;
             // 
             // questSentence
             // 
@@ -747,14 +757,6 @@
             this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
             this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
-            // 
-            // questSpeaker
-            // 
-            this.questSpeaker.FormattingEnabled = true;
-            this.questSpeaker.Location = new System.Drawing.Point(84, 3);
-            this.questSpeaker.Name = "questSpeaker";
-            this.questSpeaker.Size = new System.Drawing.Size(99, 20);
-            this.questSpeaker.TabIndex = 6;
             // 
             // Form1
             // 

@@ -60,6 +60,8 @@ namespace PhantasyQuestEditor {
             // 
             speaker.FormattingEnabled = true;
             speaker.Name = "questSpeaker";
+            speaker.Items.AddRange(new object[] {
+            "player"});
             speaker.Size = new Size(99, 20);
             speaker.TabIndex = 6;
             // 

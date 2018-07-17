@@ -35,10 +35,10 @@ namespace PhantasyQuestEditor.fileManager {
                     CheckedListBox questEvents = (CheckedListBox) questEventsControls[0];
 
                     Control[] questConditionsControls = questFlowPanel.Controls.Find("questConditions", false);
-                    CheckedListBox questConditions = (CheckedListBox) questEventsControls[0];
+                    CheckedListBox questConditions = (CheckedListBox) questConditionsControls[0];
 
-                    Control[] questSpeakerControls = questFlowPanel.Controls.Find("questSperaker", false);
-                    ListBox questSpeaker = (ListBox) questEventsControls[0];
+                    Control[] questSpeakerControls = questFlowPanel.Controls.Find("questSpeaker", false);
+                    ComboBox questSpeaker = (ComboBox) questSpeakerControls[0];
 
                     Control[] conversationNumberControls = questFlowPanel.Controls.Find("conversationNumber", false);
                     Label conversationNumberLabel = (Label) conversationNumberControls[0];
@@ -49,7 +49,7 @@ namespace PhantasyQuestEditor.fileManager {
                     string sentence = questSentence.Text;
 
                     List<int> eventNumbers = new List<int>();
-                    for (int i = 0; i > questEvents.Items.Count; i++) {
+                    for (int i = 0; i < questEvents.Items.Count; i++) {
                         if (questEvents.GetItemChecked(i)) {
                             eventNumbers.Add(i + 1);
                         }
@@ -65,47 +65,80 @@ namespace PhantasyQuestEditor.fileManager {
                     string speaker = null;
                     speaker = questSpeaker.SelectedItem.ToString();
                     string speakerID = null;
-                    DataTable npcDataTable = form.getNPCDataTable();
-                    foreach (DataRow row in npcDataTable.Rows) {
-                        if (row.ItemArray[0].ToString().Equals(speaker)) {
-                            speakerID = row.ItemArray[1].ToString();
-                            break;
+
+                    if (!speaker.Equals("player")) {
+                        DataTable npcDataTable = form.getNPCDataTable();
+                        foreach (DataRow row in npcDataTable.Rows) {
+                            if (row.ItemArray[0].ToString().Equals(speaker)) {
+                                speakerID = row.ItemArray[1].ToString();
+                                break;
+                            }
                         }
                     }
 
                     string conversationNumber = conversationNumberLabel.Text;
 
                     List<int> nextConversationNumbers = new List<int>();
-                    string[] strings = nextConversationNumberLabel.Text.Replace("Next: ,", "").Split(',');
-                    foreach (string s in strings) {
-                        nextConversationNumbers.Add(int.Parse(s));
-                    }
-
-                    writer.WriteLine("  -" + speakerID + ">" + sentence);
-
-                    if (eventNumbers != null) {
-                        writer.Write("; events:");
-                        foreach (int number in eventNumbers) {
-                            writer.Write(number + ", ");
-                        }
-                    }
-
-                    if (conditionNumbers != null) {
-                        writer.Write("; conditions:");
-                        foreach (int number in conditionNumbers) {
-                            writer.Write(number + ", ");
+                    if (nextConversationNumberLabel.Text.Contains(",")) {
+                        //exist next conversation
+                        string[] strings = nextConversationNumberLabel.Text.Replace("Next: ", "").Remove(0, 1).Split(',');
+                        foreach (string s in strings) {
+                            if (s.Equals("")) break;
+                            nextConversationNumbers.Add(int.Parse(s));
                         }
                     }
 
                     if (speaker.Equals("player")) {
-                        writer.Write("; next:" + nextConversationNumbers[0]);
+                        writer.Write("  - player>" + sentence);
                     }
                     else {
-                        writer.Write("; reply:");
-                        foreach (int i in nextConversationNumbers) {
-                            writer.Write(i + ", ");
+                        writer.Write("  - " + speakerID + ">" + sentence);
+                    }
+
+                    if (eventNumbers.Count != 0) {
+                        writer.Write("; events:");
+                        for (int i = 0; i < eventNumbers.Count; i++) {
+                            if (i == 0) {
+                                writer.Write(eventNumbers[0]);
+                            }
+                            else {
+                                writer.Write(", " + eventNumbers[i]);
+                            }
                         }
                     }
+
+                    if (conditionNumbers.Count != 0) {
+                        writer.Write("; conditions:");
+                        for (int i = 0; i < conditionNumbers.Count; i++) {
+                            if (i == 0) {
+                                writer.Write(conditionNumbers[0]);
+                            }
+                            else {
+                                writer.Write(", " + conditionNumbers[i]);
+                            }
+                        }
+                    }
+
+                    if (nextConversationNumbers.Count != 0) {
+                        if (nextConversationNumbers.Count == 1) {
+                            //next conversation speaker is a NPC
+                            writer.Write("; next:" + nextConversationNumbers[0].ToString());
+                        }
+                        else {
+                            //next conversation speaker is a player
+                            writer.Write("; reply:");
+                            for (int i = 0; i < nextConversationNumbers.Count; i++) {
+                                if (i == 0) {
+                                    writer.Write(nextConversationNumbers[0]);
+                                }
+                                else {
+                                    writer.Write(", " + nextConversationNumbers[i]);
+                                }
+                            }
+                        }
+                    }
+
+                    writer.WriteLine("");
                 }
 
                 writer.Close();
