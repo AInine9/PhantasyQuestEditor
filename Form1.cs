@@ -122,5 +122,62 @@ namespace PhantasyQuestEditor {
         public DataTable getNPCDataTable() {
             return dataSet1.NPCDataTable;
         }
+
+        public DataTable getObjectiveDataTable() {
+            return dataSet1.ObjectiveDataTable;
+        }
+
+        public DataTable getEventDataTable() {
+            return dataSet1.EventDataTable;
+        }
+
+        public DataTable getConditionDataTable() {
+            return dataSet1.ConditionDataTable;
+        }
+
+        private void EventListEdited(object sender, DataGridViewCellEventArgs e) {
+            int changedRow = e.RowIndex;
+
+            if (changedRow == -1) return;
+
+            string eventString = eventDataListView.Rows[changedRow].Cells[0].Value.ToString();
+
+            foreach (Control control in tabPage2.Controls.Find("questEvents", true)) {
+                CheckedListBox eventList = (CheckedListBox) control;
+                eventList.Items.Add(eventString);
+            }
+        }
+
+        private void ConditionListEdited(object sender, DataGridViewCellEventArgs e) {
+            int changedRow = e.RowIndex;
+
+            if (changedRow == -1) return;
+
+            string conditionString = conditionDataListView.Rows[changedRow].Cells[0].Value.ToString();
+
+            foreach (Control control in tabPage2.Controls.Find("questConditions", true)) {
+                CheckedListBox conditionList = (CheckedListBox) control;
+                conditionList.Items.Add(conditionString);
+            }
+        }
+
+        private void NPCListEdited(object sender, DataGridViewCellEventArgs e) {
+            int changedRow = e.RowIndex;
+
+            if (changedRow == -1) return;
+
+            string npcString = npcListDataView.Rows[changedRow].Cells[0].Value.ToString();
+
+            if (e.ColumnIndex == 1) return;
+
+            foreach (Control control in tabPage2.Controls.Find("questSpeaker", true)) {
+                ComboBox npcList = (ComboBox) control;
+                npcList.Items.Add(npcString);
+            }
+        }
+
+        public DataTable getJournalDataTable() {
+            return dataSet1.JournalDataTable;
+        }
     }
 }

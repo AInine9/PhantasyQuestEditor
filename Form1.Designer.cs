@@ -45,7 +45,6 @@
             this.questEvents = new System.Windows.Forms.CheckedListBox();
             this.questConditions = new System.Windows.Forms.CheckedListBox();
             this.conversationNumber = new System.Windows.Forms.Label();
-            this.questSpeaker = new System.Windows.Forms.ListBox();
             this.nextConversationNumber = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -92,6 +91,7 @@
             this.エクスポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.インポートToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.questSpeaker = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.startPointListView)).BeginInit();
@@ -206,6 +206,7 @@
             this.npcListDataView.RowTemplate.Height = 21;
             this.npcListDataView.Size = new System.Drawing.Size(411, 186);
             this.npcListDataView.TabIndex = 3;
+            this.npcListDataView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.NPCListEdited);
             // 
             // nPC名DataGridViewTextBoxColumn
             // 
@@ -268,11 +269,11 @@
             // 
             this.questFlowPanel.BackColor = System.Drawing.Color.DarkSalmon;
             this.questFlowPanel.Controls.Add(this.questConnectButton);
+            this.questFlowPanel.Controls.Add(this.questSpeaker);
             this.questFlowPanel.Controls.Add(this.questSentence);
             this.questFlowPanel.Controls.Add(this.questEvents);
             this.questFlowPanel.Controls.Add(this.questConditions);
             this.questFlowPanel.Controls.Add(this.conversationNumber);
-            this.questFlowPanel.Controls.Add(this.questSpeaker);
             this.questFlowPanel.Controls.Add(this.nextConversationNumber);
             this.questFlowPanel.Location = new System.Drawing.Point(6, 6);
             this.questFlowPanel.Name = "questFlowPanel";
@@ -302,6 +303,7 @@
             // questEvents
             // 
             this.questEvents.FormattingEnabled = true;
+            this.questEvents.HorizontalScrollbar = true;
             this.questEvents.Location = new System.Drawing.Point(3, 112);
             this.questEvents.Name = "questEvents";
             this.questEvents.ScrollAlwaysVisible = true;
@@ -311,6 +313,7 @@
             // questConditions
             // 
             this.questConditions.FormattingEnabled = true;
+            this.questConditions.HorizontalScrollbar = true;
             this.questConditions.Location = new System.Drawing.Point(115, 112);
             this.questConditions.Name = "questConditions";
             this.questConditions.ScrollAlwaysVisible = true;
@@ -327,21 +330,11 @@
             this.conversationNumber.TabIndex = 4;
             this.conversationNumber.Text = "1";
             // 
-            // questSpeaker
-            // 
-            this.questSpeaker.FormattingEnabled = true;
-            this.questSpeaker.ItemHeight = 12;
-            this.questSpeaker.Location = new System.Drawing.Point(24, 178);
-            this.questSpeaker.Name = "questSpeaker";
-            this.questSpeaker.ScrollAlwaysVisible = true;
-            this.questSpeaker.Size = new System.Drawing.Size(93, 16);
-            this.questSpeaker.TabIndex = 1;
-            // 
             // nextConversationNumber
             // 
             this.nextConversationNumber.AutoSize = true;
             this.nextConversationNumber.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nextConversationNumber.Location = new System.Drawing.Point(123, 175);
+            this.nextConversationNumber.Location = new System.Drawing.Point(24, 175);
             this.nextConversationNumber.Name = "nextConversationNumber";
             this.nextConversationNumber.Size = new System.Drawing.Size(45, 15);
             this.nextConversationNumber.TabIndex = 5;
@@ -517,6 +510,7 @@
             this.eventDataListView.RowTemplate.Height = 21;
             this.eventDataListView.Size = new System.Drawing.Size(880, 280);
             this.eventDataListView.TabIndex = 2;
+            this.eventDataListView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.EventListEdited);
             // 
             // イベントDataGridViewTextBoxColumn
             // 
@@ -610,6 +604,7 @@
             this.conditionDataListView.RowTemplate.Height = 21;
             this.conditionDataListView.Size = new System.Drawing.Size(880, 280);
             this.conditionDataListView.TabIndex = 2;
+            this.conditionDataListView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConditionListEdited);
             // 
             // 条件DataGridViewTextBoxColumn
             // 
@@ -753,6 +748,14 @@
             this.開くToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.開くToolStripMenuItem.Text = "開く";
             // 
+            // questSpeaker
+            // 
+            this.questSpeaker.FormattingEnabled = true;
+            this.questSpeaker.Location = new System.Drawing.Point(84, 3);
+            this.questSpeaker.Name = "questSpeaker";
+            this.questSpeaker.Size = new System.Drawing.Size(99, 20);
+            this.questSpeaker.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -827,7 +830,6 @@
         private System.Windows.Forms.TextBox questSentence;
         private System.Windows.Forms.CheckedListBox questEvents;
         private System.Windows.Forms.CheckedListBox questConditions;
-        private System.Windows.Forms.ListBox questSpeaker;
         private System.Windows.Forms.Button questConnectButton;
         private System.Windows.Forms.DataGridView npcListDataView;
         private System.Windows.Forms.BindingSource nPCDataTableBindingSource;
@@ -872,6 +874,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.TextBox questNameLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn 会話番号DataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox questSpeaker;
     }
 }
 

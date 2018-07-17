@@ -8,7 +8,7 @@ namespace PhantasyQuestEditor {
         private Button button;
         private CheckedListBox events;
         private CheckedListBox conditions;
-        private ListBox speaker;
+        private ComboBox speaker;
         private TextBox sentence;
         private Label number, nextConversationNumber;
 
@@ -17,7 +17,7 @@ namespace PhantasyQuestEditor {
             button = new Button();
             events = new CheckedListBox();
             conditions = new CheckedListBox();
-            speaker = new ListBox();
+            speaker = new ComboBox();
             sentence = new TextBox();
             number = new Label();
             nextConversationNumber = new Label();
@@ -26,11 +26,11 @@ namespace PhantasyQuestEditor {
             // 
             panel.BackColor = Color.DarkSalmon;
             panel.Controls.Add(button);
+            panel.Controls.Add(speaker);
             panel.Controls.Add(sentence);
             panel.Controls.Add(events);
             panel.Controls.Add(conditions);
             panel.Controls.Add(number);
-            panel.Controls.Add(speaker);
             panel.Controls.Add(nextConversationNumber);
             panel.Location = mouseLocation;
             panel.Name = "questFlowPanel";
@@ -42,6 +42,7 @@ namespace PhantasyQuestEditor {
             // 
             events.FormattingEnabled = true;
             events.Name = "questEvents";
+            events.HorizontalScrollbar = true;
             events.ScrollAlwaysVisible = true;
             events.Size = new Size(106, 60);
             events.TabIndex = 1;
@@ -50,6 +51,7 @@ namespace PhantasyQuestEditor {
             // 
             conditions.FormattingEnabled = true;
             conditions.Name = "questConditions";
+            conditions.HorizontalScrollbar = true;
             conditions.ScrollAlwaysVisible = true;
             conditions.Size = new Size(109, 60);
             conditions.TabIndex = 2;
@@ -57,11 +59,9 @@ namespace PhantasyQuestEditor {
             // questSpeaker
             // 
             speaker.FormattingEnabled = true;
-            speaker.ItemHeight = 12;
             speaker.Name = "questSpeaker";
-            speaker.ScrollAlwaysVisible = true;
-            speaker.Size = new Size(93, 16);
-            speaker.TabIndex = 1;
+            speaker.Size = new Size(99, 20);
+            speaker.TabIndex = 6;
             // 
             // questSentence
             // 

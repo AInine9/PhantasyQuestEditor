@@ -51,14 +51,14 @@ namespace PhantasyQuestEditor.fileManager {
                     List<int> eventNumbers = new List<int>();
                     for (int i = 0; i > questEvents.Items.Count; i++) {
                         if (questEvents.GetItemChecked(i)) {
-                            eventNumbers.Add(i);
+                            eventNumbers.Add(i + 1);
                         }
                     }
 
                     List<int> conditionNumbers = new List<int>();
                     for (int i = 0; i < questConditions.Items.Count; i++) {
                         if (questConditions.GetItemChecked(i)) {
-                            conditionNumbers.Add(i);
+                            conditionNumbers.Add(i + 1);
                         }
                     }
 
