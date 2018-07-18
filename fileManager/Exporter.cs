@@ -69,8 +69,7 @@ namespace PhantasyQuestEditor.fileManager {
                     string speakerID = null;
 
                     if (!speaker.Equals("player")) {
-                        DataTable npcDataTable = form.getNPCDataTable();
-                        foreach (DataRow row in npcDataTable.Rows) {
+                        foreach (DataRow row in form.getNPCDataTable().Rows) {
                             if (row.ItemArray[0].ToString().Equals(speaker)) {
                                 speakerID = row.ItemArray[1].ToString();
                                 break;
@@ -141,6 +140,43 @@ namespace PhantasyQuestEditor.fileManager {
                     }
 
                     writer.WriteLine("");
+                }
+
+                writer.WriteLine("StartPoints:");
+                foreach (DataRow row in form.getStartPointsDataTable().Rows) {
+                    string startPoint = row[0].ToString();
+                    writer.WriteLine("  - " + startPoint);
+                }
+
+                writer.WriteLine("NPCs:");
+                foreach (DataRow row in form.getNPCDataTable().Rows) {
+                    string npcName = row.ItemArray[0].ToString();
+                    string npcID = row.ItemArray[1].ToString();
+                    writer.WriteLine("  - " + npcName + ":" + npcID);
+                }
+
+                writer.WriteLine("Objectives:");
+                foreach (DataRow row in form.getObjectiveDataTable().Rows) {
+                    string objective = row[0].ToString();
+                    writer.WriteLine("  - " + objective);
+                }
+
+                writer.WriteLine("Events:");
+                foreach (DataRow row in form.getEventDataTable().Rows) {
+                    string eventString = row[0].ToString();
+                    writer.WriteLine("  - " + eventString);
+                }
+
+                writer.WriteLine("Conditions:");
+                foreach (DataRow row in form.getConditionDataTable().Rows) {
+                    string condition = row[0].ToString();
+                    writer.WriteLine("  - " + condition);
+                }
+
+                writer.WriteLine("Journals:");
+                foreach (DataRow row in form.getJournalDataTable().Rows) {
+                    string journal = row[0].ToString();
+                    writer.WriteLine("  - " + journal);
                 }
 
                 writer.Close();

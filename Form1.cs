@@ -124,15 +124,23 @@ namespace PhantasyQuestEditor {
         }
 
         public DataTable getObjectiveDataTable() {
-            return dataSet1.ObjectiveDataTable;
+            return dataSet11.ObjectiveDataTable;
         }
 
         public DataTable getEventDataTable() {
-            return dataSet1.EventDataTable;
+            return dataSet13.EventDataTable;
         }
 
         public DataTable getConditionDataTable() {
-            return dataSet1.ConditionDataTable;
+            return dataSet12.ConditionDataTable;
+        }
+
+        public DataTable getJournalDataTable() {
+            return dataSet14.JournalDataTable;
+        }
+
+        public DataTable getStartPointsDataTable() {
+            return dataSet1.StartPointDataTable;
         }
 
         private void EventListEdited(object sender, DataGridViewCellEventArgs e) {
@@ -174,10 +182,6 @@ namespace PhantasyQuestEditor {
                 ComboBox npcList = (ComboBox) control;
                 npcList.Items.Add(npcString);
             }
-        }
-
-        public DataTable getJournalDataTable() {
-            return dataSet1.JournalDataTable;
         }
     }
 }
