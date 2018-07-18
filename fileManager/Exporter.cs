@@ -24,7 +24,9 @@ namespace PhantasyQuestEditor.fileManager {
                 writer.WriteLine("Name: " + form.getQuestNameLabel().Text);
 
                 writer.WriteLine("Conversation:");
-                Control[] controls = tabpage2.Controls.Find("questFlowPanel", true);
+                List<Control> controls = new List<Control>();
+                controls.AddRange(tabpage2.Controls.Find("questFlowPanel", true));
+                controls.Reverse();
 
                 foreach (Control control in controls) {
                     FlowLayoutPanel questFlowPanel = (FlowLayoutPanel) control;
