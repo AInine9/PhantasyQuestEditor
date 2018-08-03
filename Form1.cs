@@ -84,6 +84,24 @@ namespace PhantasyQuestEditor {
 
                 nextConversationLabel[0].Text = nextConversationLabel[0].Text + "," + nextConversationID;
                 nextConversationLabel = null;
+
+                CheckedListBox eventList = (CheckedListBox) panel.Controls.Find("questEvents", false)[0];
+                for (int i = 0; i < eventDataListView.Rows.Count - 1; i++) {
+                    string eventString = eventDataListView.Rows[i].Cells[0].Value.ToString();
+                    eventList.Items.Add(eventString);
+                }
+
+                CheckedListBox conditionList = (CheckedListBox) panel.Controls.Find("questConditions", false)[0];
+                for (int i = 0; i < conditionDataListView.Rows.Count - 1; i++) {
+                    string conditionString = conditionDataListView.Rows[i].Cells[0].Value.ToString();
+                    conditionList.Items.Add(conditionString);
+                }
+
+                ComboBox speakerList = (ComboBox) panel.Controls.Find("questSpeaker", false)[0];
+                for (int i = 0; i < npcListDataView.Rows.Count - 1; i++) {
+                    string speakerString = npcListDataView.Rows[i].Cells[0].Value.ToString();
+                    speakerList.Items.Add(speakerString);
+                }
             }
         }
 
